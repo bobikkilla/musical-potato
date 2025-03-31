@@ -45,6 +45,7 @@ void test_full_random(int number_of_sorting_algorithm, int elements_module, int 
         }
         end = clock();
         summary_time+= ((double) (end - start)) / CLOCKS_PER_SEC;
+        free(array);
     }
     if(number_of_sorting_algorithm == 1) {
         printf("\n\nСреднее время сортировки массива %d случайных чисел по модулю %d\n",number_of_elements, elements_module);
@@ -91,6 +92,7 @@ void test_sorted_subarrays(int number_of_sorting_algorithm, int subarray_module,
         }
         end = clock();
         summary_time+= ((double) (end - start)) / CLOCKS_PER_SEC;
+        free(array);
     }
     if(number_of_sorting_algorithm == 1) {
         printf("\n\nСреднее время сортировки отсортированных подмассивов по модулю %d\n", subarray_module);
@@ -148,6 +150,7 @@ void test_presorted_swaps(int number_of_sorting_algorithm, int number_of_swaps, 
         }
         end = clock();
         summary_time+= ((double) (end - start)) / CLOCKS_PER_SEC;
+        free(array);
     }
     if(number_of_sorting_algorithm == 1) {
         printf("\n\nСреднее время сортировки массива с %d свопов\n", number_of_swaps);
@@ -198,6 +201,7 @@ void test_same_elements(int number_of_sorting_algorithm, int percent_of_same_ele
         }
         end = clock();
         summary_time+= ((double) (end - start)) / CLOCKS_PER_SEC;
+        free(array);
     }
     if(number_of_sorting_algorithm == 1) {
         printf("\n\nСреднее время сортировки массива с %d%% одинаковых элеметов\n", percent_of_same_elements);
@@ -240,6 +244,7 @@ void test_backward_sorted(int number_of_sorting_algorithm, int num_of_elements) 
         }
         end = clock();
         summary_time+= ((double) (end - start)) / CLOCKS_PER_SEC;
+        free(array);
     }
     if(number_of_sorting_algorithm == 1) {
         printf("\n\nСреднее время сортировки отсортированного в обратном порядке массива\n");
